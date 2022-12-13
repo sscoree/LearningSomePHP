@@ -33,7 +33,8 @@ function arrayPrinter (array $array): array
     }
     return $array;
 }
-arrayPrinter(["Labas!", "Kaip sekasi?"]);
+arrayPrinter(["'some text'", "'another text'"]);
+echo PHP_EOL;
 
 /*
 3. Parašykite funkciją 'stringEnhancer', kuri grąžintų pakeistą tekstą.
@@ -42,6 +43,10 @@ Funkcija grąžina: '##some text##'
 Funkcijos kvietimas: stringEnhancer('some text')
 Funkcija grąžina: '**some text**'
 */
+echo "Task 3";
+echo PHP_EOL;
+
+
 
 /*
 4. Parašykite funkciją 'stringModifier', kuri pamodifikuotų paduotą string tipo kintamąjį.
