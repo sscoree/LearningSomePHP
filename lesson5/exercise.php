@@ -5,6 +5,8 @@
 /*
 1. Parašykite funkciją 'dividesBy5', kuri priimtų int tipo skaičių ir grąžintų jo dalybos iš 5 liekaną.
 */
+echo "Task 1";
+echo PHP_EOL;
 function dividesBy5 (int $number): int
 {
     return $number % 5;
@@ -21,6 +23,17 @@ Funkcija grąžina: funkcija nieko negrąžina - ji tik išspausdina masyvą į 
 'another text'
 ...
 */
+echo "Task 2";
+echo PHP_EOL;
+function arrayPrinter (array $array): array
+{
+    foreach ($array as $value) {
+        echo $value;
+        echo PHP_EOL;
+    }
+    return $array;
+}
+arrayPrinter(["Labas!", "Kaip sekasi?"]);
 
 /*
 3. Parašykite funkciją 'stringEnhancer', kuri grąžintų pakeistą tekstą.
