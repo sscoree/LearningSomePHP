@@ -85,11 +85,16 @@ echo PHP_EOL;
 function textReplicator(string $text, ?int $num): string
 {
     for ($i = 0; $i <= $num; $i++) {
-        echo $text.'-';
+        if ($num !== null && $num !== 0) {
+            echo $text.'-';
+        }
+        else {
+            echo $text;
+        }
     }
     return $text;
 }
-textReplicator('some_text', null);
+textReplicator('some_text', 5);
 /*
 6. Paverskite funkciją 'textReplicator', į veikiančią anoniminę funkciją.
 */
