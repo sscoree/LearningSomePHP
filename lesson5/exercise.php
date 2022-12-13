@@ -25,13 +25,12 @@ Funkcija grąžina: funkcija nieko negrąžina - ji tik išspausdina masyvą į 
 */
 echo "Task 2";
 echo PHP_EOL;
-function arrayPrinter (array $array): array
+function arrayPrinter (array $array): void
 {
     foreach ($array as $value) {
         echo "'" . $value . "'";
         echo PHP_EOL;
     }
-    return $array;
 }
 arrayPrinter(["some text", "another text"]);
 echo PHP_EOL;
