@@ -64,15 +64,15 @@ Funkcija grąžina: funkcija nieko negrąžina
 echo "Task 4";
 echo PHP_EOL;
 
-function stringModifier(string $text, string $enhancer): void
+function stringModifier(string &$text, string $enhancer): void
 {
     $text = $enhancer . $text . $enhancer;
-    echo $text;
 }
 $x = 'some text';
 stringModifier($x, '$$');
+echo $x.PHP_EOL;
 /*
-4. Parašykite funkciją 'textReplicator', kuri grąžintų 'padaugintą' tekstą.
+5. Parašykite funkciją 'textReplicator', kuri grąžintų 'padaugintą' tekstą.
 Funkcijos kvietimas:
 textReplicator('some_text', 3);
 Funkcija grąžina: 'some_text-some_text-some_text'
@@ -80,7 +80,10 @@ Funkcijos kvietimas:
 textReplicator('some_text', null);
 Funkcija grąžina: 'some_text'
 */
+function textReplicator(string $text, ?int $num): string
+{
 
+}
 /*
-4. Paverskite funkciją 'textReplicator', į veikiančią anoniminę funkciją.
+6. Paverskite funkciją 'textReplicator', į veikiančią anoniminę funkciją.
 */
