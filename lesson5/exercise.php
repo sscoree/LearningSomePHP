@@ -80,10 +80,16 @@ Funkcijos kvietimas:
 textReplicator('some_text', null);
 Funkcija grąžina: 'some_text'
 */
+echo "Task 5";
+echo PHP_EOL;
 function textReplicator(string $text, ?int $num): string
 {
-
+    for ($i = 0; $i <= $num; $i++) {
+        echo $text.'-';
+    }
+    return $text;
 }
+textReplicator('some_text', null);
 /*
 6. Paverskite funkciją 'textReplicator', į veikiančią anoniminę funkciją.
 */
