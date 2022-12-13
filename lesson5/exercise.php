@@ -95,6 +95,19 @@ function textReplicator(string $text, ?int $num): string
     return $text;
 }
 textReplicator('some_text', 5);
+echo PHP_EOL;
 /*
 6. Paverskite funkciją 'textReplicator', į veikiančią anoniminę funkciją.
 */
+echo "Task 6";
+echo PHP_EOL;
+
+$textReplicator = function(string $text, ?int $num): string
+{
+    for ($i = 0; $i <= $num; $i++) {
+        echo $text;
+    }
+    return $text;
+};
+
+$textReplicator("some_text", 2);
