@@ -84,18 +84,16 @@ echo "Task 5";
 echo PHP_EOL;
 function textReplicator(string $text, ?int $num): string
 {
-    for ($i = 0; $i <= $num; $i++) {
-        if ($num !== null && $num !== 0) {
-            echo $text.'-';
-        }
-        else {
-            echo $text;
-        }
+    $result = $text;
+    if ($num === null)
+        $num = 1;
+    for ($i = 1; $i < $num; $i++) {
+        $result = $result . '-' . $text;
     }
-    return $text;
+    return $result;
 }
-textReplicator('some_text', 5);
-echo PHP_EOL;
+var_dump(textReplicator('some_text', 5));
+var_dump(textReplicator('some_text', null));
 /*
 6. Paverskite funkciją 'textReplicator', į veikiančią anoniminę funkciją.
 */
@@ -104,10 +102,13 @@ echo PHP_EOL;
 
 $textReplicator = function(string $text, ?int $num): string
 {
-    for ($i = 0; $i <= $num; $i++) {
-        echo $text;
+    $result = $text;
+    if ($num === null)
+        $num = 1;
+    for ($i = 1; $i < $num; $i++) {
+        $result = $result . '-' . $text;
     }
-    return $text;
+    return $result;
 };
 
-$textReplicator("some_text", 2);
+var_dump($textReplicator("some_text", 2));
