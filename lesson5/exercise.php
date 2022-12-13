@@ -61,7 +61,15 @@ stringModifier($x, '##');
 echo $x; // '##some text##'
 Funkcija grąžina: funkcija nieko negrąžina
 */
+echo "Task 4";
+echo PHP_EOL;
 
+function stringModifier(string $text): void
+{
+    $x = 'some text';
+    $text = $text . $x . $text;
+}
+var_dump(stringModifier('#'));
 /*
 4. Parašykite funkciją 'textReplicator', kuri grąžintų 'padaugintą' tekstą.
 Funkcijos kvietimas:
