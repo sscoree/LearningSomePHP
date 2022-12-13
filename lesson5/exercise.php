@@ -51,6 +51,7 @@ function stringEnhancer(string $text, string $enhancer = '**'): string
     return $text;
 }
 
+var_dump(stringEnhancer('some text'));
 var_dump(stringEnhancer('some text', '##'));
 /*
 4. Parašykite funkciją 'stringModifier', kuri pamodifikuotų paduotą string tipo kintamąjį.
