@@ -64,13 +64,13 @@ Funkcija grąžina: funkcija nieko negrąžina
 echo "Task 4";
 echo PHP_EOL;
 
-function stringModifier(string $text): void
+function stringModifier(string $text, string $enhancer): void
 {
-    $x = 'some text';
-    $text = $text . $x . $text;
+    $text = $enhancer . $text . $enhancer;
     echo $text;
 }
-stringModifier('##');
+$x = 'some text';
+stringModifier($x, '$$');
 /*
 4. Parašykite funkciją 'textReplicator', kuri grąžintų 'padaugintą' tekstą.
 Funkcijos kvietimas:
