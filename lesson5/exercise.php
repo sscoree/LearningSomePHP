@@ -28,12 +28,12 @@ echo PHP_EOL;
 function arrayPrinter (array $array): array
 {
     foreach ($array as $value) {
-        echo $value;
+        echo "'" . $value . "'";
         echo PHP_EOL;
     }
     return $array;
 }
-arrayPrinter(["'some text'", "'another text'"]);
+arrayPrinter(["some text", "another text"]);
 echo PHP_EOL;
 
 /*
