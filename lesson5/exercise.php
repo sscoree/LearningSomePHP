@@ -68,8 +68,9 @@ function stringModifier(string $text): void
 {
     $x = 'some text';
     $text = $text . $x . $text;
+    echo $text;
 }
-var_dump(stringModifier('#'));
+stringModifier('##');
 /*
 4. Parašykite funkciją 'textReplicator', kuri grąžintų 'padaugintą' tekstą.
 Funkcijos kvietimas:
