@@ -45,8 +45,13 @@ Funkcija grąžina: '**some text**'
 echo "Task 3";
 echo PHP_EOL;
 
+function stringEnhancer(string $text, string $enhancer = '**'): string
+{
+    $text = $enhancer . $text . $enhancer;
+    return $text;
+}
 
-
+var_dump(stringEnhancer('some text', '##'));
 /*
 4. Parašykite funkciją 'stringModifier', kuri pamodifikuotų paduotą string tipo kintamąjį.
 Funkcijos kvietimas:
