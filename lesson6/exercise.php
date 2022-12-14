@@ -149,16 +149,24 @@ function exercise8(): array
 }
 var_dump(exercise8());
 
-
+echo "Task: 9 - ";
 function exercise9(int $start, int $end): void
 {
     /*
     Išspausdinkite skaičius nuo $start iki $end pasinaudodami ciklu.
     Jeigu $start yra mažiau nei $end, funkcija nieko nespausdina.
     */
+    for ($i = $start; $i >= $end; $i--) {
+        if (!$start < $end) {
+            echo $i. " ";
+        }
+        else {
+            echo "";
+        }
+    }
 
 }
-
+var_dump(exercise9(7, 2));
 function exercise10(int $number): void
 {
     /*
