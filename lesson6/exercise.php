@@ -130,6 +130,8 @@ function exercise7(): array
     return $numbers;
 }
 var_dump(exercise7());
+
+echo "Task: 8 - ";
 function exercise8(): array
 {
     /*
@@ -138,9 +140,15 @@ function exercise8(): array
     */
 
     $numbers = ['ninety' => 90, 'one' => 1, 'two' => 2, 'three' => 3, 'four' => 4, 'five' => 5];
-
-    return [];
+    foreach ($numbers as $key => $number) {
+        if ($number % 2 === 0) {
+            unset($numbers[$key]);
+        }
+    }
+    return $numbers;
 }
+var_dump(exercise8());
+
 
 function exercise9(int $start, int $end): void
 {
