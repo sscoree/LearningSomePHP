@@ -164,9 +164,11 @@ function exercise9(int $start, int $end): void
             echo "";
         }
     }
-
 }
 exercise9(7, 2);
+echo PHP_EOL;
+
+echo "Task: 10 - ";
 function exercise10(int $number): void
 {
     /*
@@ -181,8 +183,19 @@ function exercise10(int $number): void
     ...
     60
     */
+    for ($i = 0; $i < $number; $i++) {
+        if ($number !== 0 && $i % 3 == 0) {
+            echo $i . PHP_EOL;
+        }
+        else {
+            echo "";
+        }
+    }
 }
+exercise10(60);
+echo PHP_EOL;
 
+echo "Task: 11 - ";
 function exercise11(int $number): void
 {
     /*
@@ -197,8 +210,16 @@ function exercise11(int $number): void
     1
     0
     */
+    for ($i = $number; $i >= 0; $i--) {
+        if ($number < 0) {
+            echo " ";
+        }
+        else {
+            echo $i . PHP_EOL;
+        }
+    }
 }
-
+exercise11(21);
 function getNumbers(): array
 {
     return [
@@ -223,3 +244,11 @@ Masyvą gausite iškvietę funkciją 'getNumbers'
 16. Raskite ir grąžinkite masyvo narių vidurkį. Neigiamus skaičius paverskite į teigiamus
 17. Į masyvą pridėkite naują narį - skaičiu 255 - ir išspausdinkite masyva pasinaudodami funkcija 'printr'
 */
+echo "Task: 12 - ";
+
+function exercise12(): void
+{
+    print_r(array_sum(getNumbers()));
+}
+exercise12();
+echo PHP_EOL;
