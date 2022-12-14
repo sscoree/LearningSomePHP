@@ -10,9 +10,9 @@ function exercise1(): int
 
     $numbers = [0, 1, 2, 3, 4];
 
-    return 0;
+    return $numbers[3];
 }
-
+var_dump(exercise1());
 function exercise2(): int
 {
     /*
