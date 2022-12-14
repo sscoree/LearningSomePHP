@@ -69,10 +69,11 @@ function exercise4(): int
         ],
     ];
 
-    return 0;
+    return $numbers['fourth']['value_2']['ninetynine'];
 }
+var_dump(exercise4());
 
-
+echo "Task: 5 - ";
 function exercise5(): int
 {
     /*
@@ -90,9 +91,11 @@ function exercise5(): int
         ],
     ];
 
-    return 0;
+    return $numbers['fourth']['value_6'][0];
 }
+var_dump(exercise5());
 
+echo "Task: 6 - ";
 function exercise6(): int
 {
     /*
@@ -110,9 +113,11 @@ function exercise6(): int
         ],
     ];
 
-    return 0;
+    return $numbers['fourth']['value_6'][6];
 }
+var_dump(exercise6());
 
+echo "Task: 7 - ";
 function exercise7(): array
 {
     /*
@@ -121,10 +126,10 @@ function exercise7(): array
     */
 
     $numbers = ['zero' => 0, 'one' => 1, 'two' => 2, 'three' => 3, 'four' => 4];
-
-    return [];
+    unset($numbers['two']);
+    return $numbers;
 }
-
+var_dump(exercise7());
 function exercise8(): array
 {
     /*
