@@ -166,7 +166,7 @@ function exercise9(int $start, int $end): void
     }
 
 }
-var_dump(exercise9(7, 2));
+exercise9(7, 2);
 function exercise10(int $number): void
 {
     /*
