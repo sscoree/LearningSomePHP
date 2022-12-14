@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+echo "Task: 1 - ";
 function exercise1(): int
 {
     /*
@@ -13,6 +14,8 @@ function exercise1(): int
     return $numbers[3];
 }
 var_dump(exercise1());
+
+echo "Task: 2 - ";
 function exercise2(): int
 {
     /*
@@ -21,9 +24,12 @@ function exercise2(): int
 
     $numbers = ['zero' => 0, 'one' => 1, 'two' => 2, 'three' => 3, 'four' => 4];
 
-    return 0;
+    return $numbers['three'];
 }
 
+var_dump(exercise2());
+
+echo "Task: 3 - ";
 function exercise3(): int
 {
     /*
@@ -41,9 +47,11 @@ function exercise3(): int
         ],
     ];
 
-    return 0;
+    return $numbers[2][1][2];
 }
+var_dump(exercise3());
 
+echo "Task: 4 - ";
 function exercise4(): int
 {
     /*
