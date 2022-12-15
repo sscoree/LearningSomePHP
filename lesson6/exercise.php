@@ -294,3 +294,21 @@ function exercise15(): void
 }
 exercise15();
 echo PHP_EOL;
+
+echo "Task: 16 - ";
+//Raskite ir grąžinkite masyvo narių vidurkį. Neigiamus skaičius paverskite į teigiamus
+function exercise16(): void
+{
+    $sum = 0;
+    foreach (getNumbers() as $value) {
+        if ($value < 0) {
+            $sum = $sum + ($value * -1);
+        }
+        else {
+            $sum = $sum + $value;
+        }
+    }
+    echo $sum / count(getNumbers());
+}
+exercise16();
+echo PHP_EOL;
