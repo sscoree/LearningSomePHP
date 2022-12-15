@@ -252,3 +252,45 @@ function exercise12(): void
 }
 exercise12();
 echo PHP_EOL;
+
+echo "Task: 13 - ";
+function exercise13(): void
+{
+    $sum = 0;
+    foreach (getNumbers() as $value) {
+        if ($value % 2 === 0){
+            $sum = $sum + $value;
+        }
+    }
+    echo $sum;
+}
+exercise13();
+echo PHP_EOL;
+
+echo "Task: 14 - ";
+function exercise14(): void
+{
+    $sum = 0;
+    foreach (getNumbers() as $value) {
+        if ($value > 0){
+            $sum = $sum + $value;
+        }
+    }
+    echo $sum;
+}
+exercise14();
+echo PHP_EOL;
+
+echo "Task: 15 - ";
+function exercise15(): void
+{
+    $sum = 1;
+    foreach (getNumbers() as $value) {
+        if ($value % 5 === 0){
+            $sum = $sum * $value;
+        }
+    }
+    echo $sum;
+}
+exercise15();
+echo PHP_EOL;
