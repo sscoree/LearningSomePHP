@@ -259,7 +259,7 @@ function exercise13(): void
     $sum = 0;
     foreach (getNumbers() as $value) {
         if ($value % 2 === 0){
-            $sum = $sum + $value;
+            $sum += $value;
         }
     }
     echo $sum;
@@ -321,3 +321,4 @@ function exercise17(): void
     print_r($a);
 }
 exercise17();
+echo PHP_EOL;
