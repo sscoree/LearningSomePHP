@@ -1,7 +1,8 @@
 <?php
 
 declare(strict_types=1);
-
+echo "Task: 1 - ";
+echo PHP_EOL;
 function exercise1(): array
 {
     $products = [
@@ -11,14 +12,18 @@ function exercise1(): array
         'item_4' => 'sofa',
         'item_5' => 'error',
     ];
-
+    foreach ($products as $key => $product){
+        if ($product === 'error') {
+            unset($products[$key]);
+        }
+    }
     /*
     Sunaikinkitę visus elementus, kurių reikšmė yra 'error' ir grąžinkite pamodifikuotą masyvą.
     Tikėkitės, kad $products masyvas gali turėti ne 5, 100 elementų - naudokite ciklą.
     */
-
-    return [];
+    return $products;
 }
+var_dump(exercise1());
 
 function exercise2(int $keyPart)
 {
