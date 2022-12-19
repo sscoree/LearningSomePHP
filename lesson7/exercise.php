@@ -31,46 +31,67 @@ function getCities(): array
         ],
     ];
 }
-
-function exercise1(): int
+echo "Task: 1 - ";
+function exercise1(array $cities): int
 {
     /*
     Suskaičiuokite bendrą miestų populiaciją pasinaudodami paprastu 'foreach' ir grąžinkite ją iš funkcijos.
     Miestus pasiimkite iškvietę funkciją 'getCities'
     */
-
-    return 0;
+    $popSum = 0;
+    foreach ($cities as $city){
+        $popSum = $popSum + $city['population'];
+    }
+    return $popSum;
 }
+var_dump(exercise1(getCities()));
 
+echo "Task: 2 - ";
 function exercise2(): int
 {
     /*
     Suskaičiuokite bendrą miestų populiaciją pasinaudodami funkcijomis array_column ir array_sum
     ir grąžinkite ją iš funkcijos
     */
-
-    return 0;
+    return array_sum(array_column(getCities(), 'population'));
 }
+var_dump(exercise2());
 
+echo "Task: 3 - ";
 function exercise3(): int
 {
     /*
     Suskaičiuokite bendrą miestų populiaciją pasinaudodami funkcija array_reduce ir grąžinkite ją iš funkcijos
     */
-
-    return 0;
+    $totalPopulation = array_reduce(
+        getCities(),
+        function (int $carry, array $city){
+            return $carry + $city['population'];
+        },
+        0
+    );
+    return $totalPopulation;
 }
+var_dump(exercise3());
 
+echo "Task: 4 - ";
 function exercise4(): int
 {
     /*
     Suskaičiuokite populiaciją miestų, kurie yra didesni nei 25,000,000 gyventojų.
     Rinkites sau patogiausią skaičiavimo būdą.
     */
-
-    return 0;
+    $popSum = 0;
+    foreach (getCities() as $getCity){
+        if($getCity['population'] > 25000000){
+            $popSum = $popSum + $getCity['population'];
+        }
+    }
+    return $popSum;
 }
+var_dump(exercise4());
 
+echo "Task: 5 - ";
 function exercise5(): array
 {
     /*
@@ -84,10 +105,16 @@ function exercise5(): array
         ...
     ]
     */
+    $getCities = getCities();
+    foreach ($getCities as $key=>$getCity){
+        if($getCity['population'] <= 25000000){
+            unset($getCities[$key]);
+        }
+    }
+    return $getCities;
 
-    return [];
 }
-
+var_dump(exercise5());
 function exercise6(): int
 {
 
