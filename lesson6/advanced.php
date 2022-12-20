@@ -25,6 +25,8 @@ function exercise1(): array
 }
 var_dump(exercise1());
 
+echo "Task: 2 - ";
+echo PHP_EOL;
 function exercise2(int $keyPart)
 {
     $products = [
@@ -32,16 +34,24 @@ function exercise2(int $keyPart)
         'product_2' => 'lamp',
         'product_3' => 'sofa',
     ];
-
     /*
-    Sunaikinkitę reikšmę, kuri atitiktų raktą 'product_' + $keyPart ir grąžinkite pamodifikuotą masyvą.
-    Jeigu tokio rakto nėra, gražinkite null. Pridėkite trūkstamą return tipą.
-    Funkcijos kvietimas: exercise2(1)
-    */
-
-    return [];
+Sunaikinkitę reikšmę, kuri atitiktų raktą 'product_' + $keyPart ir grąžinkite pamodifikuotą masyvą.
+Jeigu tokio rakto nėra, gražinkite null. Pridėkite trūkstamą return tipą.
+Funkcijos kvietimas: exercise2(1)
+*/
+    $key = 'product_';
+    if (isset($products[$key.$keyPart])){
+        unset($products[$key.$keyPart]);
+        return $products;
+    }
+    else {
+        return null;
+    }
 }
+var_dump(exercise2(1));
 
+echo "Task: 3 - ";
+echo PHP_EOL;
 function exercise3(): array
 {
     $transactions = [
@@ -54,15 +64,18 @@ function exercise3(): array
             'status' => 'completed',
         ],
     ];
-
     /*
     Sunaikinkitę visus elementus, kurių reikšmė yra 'error' ir grąžinkite pamodifikuotą masyvą.
     Tikėkitės, kad $products masyvas gali turėti ne 5, 100 elementų - naudokite ciklą.
     */
-
-    return [];
+    foreach ($transactions as $key => $transaction){
+        if ($transaction['status'] === 'error') {
+            unset($transactions[$key]);
+        }
+    }
+    return $transactions;
 }
-
+var_dump(exercise3());
 function exercise4(string $key): string
 {
     $products = [
