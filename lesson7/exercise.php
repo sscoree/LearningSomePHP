@@ -63,14 +63,12 @@ function exercise3(): int
     /*
     Suskaičiuokite bendrą miestų populiaciją pasinaudodami funkcija array_reduce ir grąžinkite ją iš funkcijos
     */
-    $totalPopulation = array_reduce(
+    return array_reduce(
         getCities(),
         function (int $carry, array $city){
             return $carry + $city['population'];
-        },
-        0
+        }, 0
     );
-    return $totalPopulation;
 }
 var_dump(exercise3());
 
@@ -80,8 +78,10 @@ function exercise4(): int
     /*
     Suskaičiuokite populiaciją miestų, kurie yra didesni nei 25,000,000 gyventojų.
     Rinkites sau patogiausią skaičiavimo būdą.
+    !!!Reikia perdaryti, nes turejo buti panaudota array funkcijos!!!
     */
     $popSum = 0;
+
     foreach (getCities() as $getCity){
         if($getCity['population'] > 25000000){
             $popSum = $popSum + $getCity['population'];
@@ -112,12 +112,12 @@ function exercise5(): array
         }
     }
     return $getCities;
-
 }
 var_dump(exercise5());
+
+echo "Task: 6 - ";
 function exercise6(): int
 {
-
     /*
     Suskaičiuokite ir grąžinkite bendrą užsakymo sumą.
     Prekėms, kurių pavadinimai nurodyti masyve $lowPriceItems, taikykite kainą 'priceLow'.
@@ -126,7 +126,6 @@ function exercise6(): int
     */
 
     $lowPriceItems = ['t-shirt', 'shoes'];
-
     $orderItems = [
         [
             'name' => 't-shirt',
@@ -154,6 +153,15 @@ function exercise6(): int
         ],
     ];
 
-
-    return 0;
+    $sumOrder = array_reduce($orderItems, function (int $carry, array $item){
+        if ($item['name'] !== 't-shirt' && $item['name'] !== 'shoes'){
+            $carry += $item['priceRegular'] * $item['quantity'];
+            return $carry;
+        }   else {
+            $carry += $item['priceLow'] * $item['quantity'];
+            return $carry;
+        }
+    }, 0);
+    return $sumOrder;
 }
+var_dump(exercise6());
