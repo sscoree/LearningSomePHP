@@ -28,6 +28,9 @@ function exercise1(array $products)
     return $count_line;
 }
 var_dump(exercise1($someProducts));
+
+echo "Task: 2";
+echo PHP_EOL;
 function exercise2(): array
 {
     /*
@@ -38,6 +41,9 @@ function exercise2(): array
     return explode('_', $longLine);
 }
 var_dump(exercise2());
+
+echo "Task: 3";
+echo PHP_EOL;
 function exercise3(): array
 {
     /*
@@ -52,24 +58,18 @@ function exercise3(): array
         'real@gmail.com',
     ];
 
-    return array_filter($emails, function (string $email)
-    {
-        if (str_contains($email, '@'))
-        return true;
-    });
+    $newEmails = [];
+    foreach ($emails as $email) {
+        if (str_contains($email, '@')) {
+            $newEmails[] = $email;
+        }
+    }
+    return $newEmails;
 }
 var_dump(exercise3());
 
-function exercise4(array $products): int
-{
-    /*
-    Suskaičiuokite ir grąžinkite visų $products masyve esančių eilučių ilgių sumą.
-    Naudokite $someProducts masyvą
-    */
-
-    return 0;
-}
-
+echo "Task: 5";
+echo PHP_EOL;
 function exercise5(): array
 {
     /*
@@ -77,7 +77,6 @@ function exercise5(): array
     Funkcijos kvietimas: exercise4()
     Funkcija grąžina: [2, 3, 3, 1, 2]
     */
-
     $words = [
         'tennis',
         'rooftops',
@@ -87,19 +86,21 @@ function exercise5(): array
     ];
     $letter_array = ['a', 'e', 'i', 'o', 'u'];
     $result = [];
-
     foreach ($words as $i => $word) {
         $result[$i] = 0;
         $word_char = str_split($word);
-        var_dump($word_char);
         foreach ($word_char as $char){
-
+            if(in_array($char, $letter_array)){
+                $result[$i] += 1;
+            }
         }
     }
-
     return $result;
 }
 var_dump(exercise5());
+
+echo "Task: 6";
+echo PHP_EOL;
 function exercise6(array $products): int
 {
     /*
