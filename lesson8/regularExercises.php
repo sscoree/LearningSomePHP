@@ -101,7 +101,7 @@ var_dump(exercise4());
 
 echo "Task: 5";
 echo PHP_EOL;
-function exercise7(): int
+function exercise5(): int
 {
     $text = 'The African philosophy of Ubuntu has its roots in the Nguni word for being human.
     The concept emphasises the significance of our community and shared humanity and teaches
@@ -116,8 +116,8 @@ function exercise7(): int
     $count = 0;
 
     $splitted = str_split($text);
-    foreach ($splitted as $i=>$letter){
-            if (in_array($letter, $letter_array)){
+    foreach ($splitted as $letter){
+            if (in_array(strtolower($letter), $letter_array)){
                 $count += 1;
         }
     }
