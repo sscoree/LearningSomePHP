@@ -112,6 +112,8 @@ function exercise6(array $products): int
     return 0;
 }
 
+echo "Task: 7";
+echo PHP_EOL;
 function exercise7(): int
 {
     $text = 'The African philosophy of Ubuntu has its roots in the Nguni word for being human.
@@ -123,5 +125,15 @@ function exercise7(): int
     Suskaičiuokite kiek balsių yra tekste
     */
 
-    return 0;
+    $letter_array = ['a', 'e', 'i', 'o', 'u'];
+    $count = 0;
+
+    $splitted = str_split($text);
+    foreach ($splitted as $i=>$letter){
+            if (in_array($letter, $letter_array)){
+                $count += 1;
+        }
+    }
+    return $count;
 }
+var_dump(exercise7());
