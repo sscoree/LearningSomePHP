@@ -68,9 +68,9 @@ function exercise3(): array
 }
 var_dump(exercise3());
 
-echo "Task: 5";
+echo "Task: 4";
 echo PHP_EOL;
-function exercise5(): array
+function exercise4(): array
 {
     /*
     Kiekvienam žodžiui apskaičiuokite balsių skaičių (a, e, i, o, u)
@@ -97,22 +97,9 @@ function exercise5(): array
     }
     return $result;
 }
-var_dump(exercise5());
+var_dump(exercise4());
 
-echo "Task: 6";
-echo PHP_EOL;
-function exercise6(array $products): int
-{
-    /*
-    Suskaičiuokite ir grąžinkite visų $products masyve esančių eilučių ilgių sumą, BET
-    į sumą neįtraukite tuščių simbolių - ty. tarpų, new line ir pan.
-    Naudokite $someProducts masyvą.
-    */
-
-    return 0;
-}
-
-echo "Task: 7";
+echo "Task: 5";
 echo PHP_EOL;
 function exercise7(): int
 {
@@ -136,4 +123,4 @@ function exercise7(): int
     }
     return $count;
 }
-var_dump(exercise7());
+var_dump(exercise5());
