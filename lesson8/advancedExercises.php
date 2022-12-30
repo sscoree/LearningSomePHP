@@ -16,7 +16,6 @@ function exercise1(string $stringToSplit, array $delimiters): array
     for ($i = 1; $i < count($delimiters); $i++){
         $stringToSplit = str_replace($delimiters[$i], $delimiters[0], $stringToSplit);
     }
-
     return explode($delimiters[0], $stringToSplit);
 }
 var_dump(exercise1('Hello_how_are-you doing?', [' ', '-', '_']));
