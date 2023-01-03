@@ -147,7 +147,7 @@ function exercise6(): array
 }
 var_dump(exercise6());
 
-function exercise7(): array
+function exercise7(): void
 {
     $newVehicle = [
         'type' => 'plane',
@@ -164,5 +164,10 @@ function exercise7(): array
     - vėl išsaugokite visą masyvą faile vehicles_database.json
     */
 
-    return [];
+    $data = file_get_contents('lesson10_files/vehicles_database.json');
+    $data = json_decode($data, true);
+    $data[] = $newVehicle;
+    $data = json_encode($data, JSON_PRETTY_PRINT);
+    file_put_contents('lesson10_files/vehicles_database.json', $data);
 }
+exercise7();
