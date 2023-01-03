@@ -58,9 +58,12 @@ function exercise2(): void
 //    foreach ($vehicles as $vehicle) {
 //        file_put_contents($file, $vehicle['name'].PHP_EOL, FILE_APPEND);
 //    }
+    $file = "lesson10_files/task2.txt";
+    foreach ($vehicles as $vehicle){
+        file_put_contents($file, $vehicle['name'].PHP_EOL, FILE_APPEND);
+    }
 }
-
-//exercise2();
+exercise2();
 
 function exercise3(): array
 {
@@ -77,8 +80,11 @@ function exercise3(): array
 //    $readFile = file_get_contents($file);
 //
 //    return explode(PHP_EOL, $readFile);
+    $file = "lesson10_files/task2.txt";
+
+    return explode(PHP_EOL, file_get_contents($file));
 }
-//print_r(exercise3());
+print_r(exercise3());
 
 /*
     Užduotis: 4
