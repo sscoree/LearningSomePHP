@@ -54,10 +54,6 @@ function exercise2(): void
         ],
     ];
 
-//    $file = 'lesson10/vehicles.txt';
-//    foreach ($vehicles as $vehicle) {
-//        file_put_contents($file, $vehicle['name'].PHP_EOL, FILE_APPEND);
-//    }
     $file = "lesson10_files/task2.txt";
     foreach ($vehicles as $vehicle){
         file_put_contents($file, $vehicle['name'].PHP_EOL, FILE_APPEND);
@@ -76,15 +72,12 @@ function exercise3(): array
         ...
     ]
     */
-//    $file = 'lesson10/vehicles.txt';
-//    $readFile = file_get_contents($file);
-//
-//    return explode(PHP_EOL, $readFile);
-    $file = "lesson10_files/task2.txt";
 
+    $file = "lesson10_files/task2.txt";
     return explode(PHP_EOL, file_get_contents($file));
 }
 print_r(exercise3());
+
 
 /*
     Užduotis: 4
@@ -99,6 +92,7 @@ print_r(exercise3());
     Event date (YYYY-MM-DD): 2022-06-15
     Event 'birthday' is 97 days away
 */
+//  ---------> padaryta kitame faile <----------
 
 function exercise5(): void
 {
@@ -138,16 +132,20 @@ function exercise5(): void
             'weight' => 1450
         ],
     ];
-}
 
+    $serializedData = json_encode($vehicles, JSON_PRETTY_PRINT);
+    file_put_contents('lesson10_files/vehicles_database.json', $serializedData);
+}
+exercise5();
 function exercise6(): array
 {
     /*
     Perskaitykite failo vehicles_database.json turinį, paverskite jį į masyvą ir grąžinkite iš funkcijos.
     */
-
-    return [];
+    $data = file_get_contents('lesson10_files/vehicles_database.json');
+    return json_decode($data, true);
 }
+var_dump(exercise6());
 
 function exercise7(): array
 {
