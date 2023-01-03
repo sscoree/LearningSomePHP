@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 function exercise1(): void
 {
     /*
@@ -9,14 +7,12 @@ function exercise1(): void
     Kiekvienas skaičius turi būti įrašytas naujoje eilutėje.
     */
 
-//    $file = 'lesson10/numbers.txt';
-//    for($i=0;$i<11;$i++) {
-//        var_dump($i);
-//        file_put_contents($file, $i.PHP_EOL, FILE_APPEND);
-//    }
+    $file = "lesson10_files/task1.txt";
+    for ($i = 0; $i <= 10; $i++){
+        file_put_contents($file, $i.PHP_EOL, FILE_APPEND);
+    }
 }
-
-//exercise1();
+exercise1();
 
 function exercise2(): void
 {
