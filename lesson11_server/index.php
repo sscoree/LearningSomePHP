@@ -1,4 +1,4 @@
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -8,7 +8,8 @@
 </head>
 <body>
 
-<?php for ($i = 0; $i < 11; $i++)
+    <?php
+    for ($i = 0; $i < 11; $i++)
     if ($i % 2 === 0){
         echo "<strong>".$i."</strong>"."<br>";
     }
