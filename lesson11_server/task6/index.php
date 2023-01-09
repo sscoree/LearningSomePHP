@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<form method="post" action="submit.php">
+<form method="POST" action="submit.php">
     <fieldset>
         <legend>New TODO</legend>
     <input type="text" name="todo">
@@ -21,16 +21,19 @@
     <fieldset>
         <legend>TODOs</legend>
         <?php
-        $space = file_get_contents('todo.json', true);
-        $json = json_decode($space, true);
-            if ($json) {
-                foreach ($json as $item){
+        $jsonContent = file_get_contents('todo.json', true);
+        $todoList = json_decode($jsonContent, true);
+            if ($todoList) {
+                foreach ($todoList as $key => $item){
                     echo $item['todo'].
                         ', created at: '.
                         $item['created'].
                         ', due date: '.
                         $item['deadline'].
-                        '<br>';
+                        '<form style="display: inline" method="POST" action="delete.php">
+                        <input type="submit" name="delete" value="Delete" />
+                        <input type="hidden" name="todoID" value="'.$key.'">
+                        </form><br>';
                 }
             }
         ?>
