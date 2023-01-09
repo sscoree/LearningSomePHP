@@ -12,6 +12,8 @@
     <fieldset>
         <legend>New TODO</legend>
     <input type="text" name="todo">
+        <input type="date">
+        <input type="time">
     <input type="submit">
     </fieldset>
 </form>
@@ -23,7 +25,7 @@
         $json = json_decode($space, true);
             if ($json) {
                 foreach ($json as $item){
-                    echo $item['todo'].'<br>';
+                    echo $item.'<br>';
                 }
             }
         ?>

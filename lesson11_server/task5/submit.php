@@ -13,7 +13,7 @@
     $oldContents = file_get_contents($file);
     $todoList = json_decode($oldContents, true);
     $todoList[] = [
-        'todo' => $_POST['todo']
+            'todo' => $_POST['todo']
     ];
     $updatedList = json_encode($todoList, JSON_PRETTY_PRINT);
     file_put_contents($file, $updatedList);

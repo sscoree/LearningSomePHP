@@ -1,5 +1,11 @@
 [
-    "I\u0161plauti indus",
-    "I\u0161ne\u0161ti \u0161iuk\u0161les",
-    "Nupirkti maisto"
+    {
+        "todo": "I\u0161plauti indus"
+    },
+    {
+        "todo": "I\u0161ne\u0161ti \u0161iuk\u0161les"
+    },
+    {
+        "todo": "Nupirkti maisto"
+    }
 ]
