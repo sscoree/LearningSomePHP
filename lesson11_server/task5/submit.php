@@ -13,16 +13,14 @@
     $oldContents = file_get_contents($file);
     $todoList = json_decode($oldContents, true);
     $todoList[] = [
-            'todo' => $_POST['todo']
+            'todo' => $_POST['todo'],
+            'deadline' => $_POST['date']. ' '. $_POST['time'],
+            'created' => date_create()->format('Y-m-d H:i')
     ];
     $updatedList = json_encode($todoList, JSON_PRETTY_PRINT);
     file_put_contents($file, $updatedList);
 
     echo "Form was submitted ";
-//    $content = $_POST['todo'];
-//    $textFile = 'todo.json';
-//    $space = file_get_contents('todo.txt', true);
-//    $json = json_decode($space, true);
 
 ?>
 <a href="index.php">Go back!</a>
