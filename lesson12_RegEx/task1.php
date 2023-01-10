@@ -8,7 +8,7 @@
 $sentence = "A car is standing in a parkinglot.";
 function replaceLastWord($string): string
 {
-    $pattern = '/\w+\.$/';
+    $pattern = '/ [\w-]+\.$/';
     $changes = '';
     return preg_replace($pattern, $changes, $string);
 }
