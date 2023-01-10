@@ -6,11 +6,10 @@
 */
 
 $sentence = "A car is standing in a parkinglot.";
-function deleteLastWord($string): string
+function replaceLastWord($string): string
 {
     $pattern = '/\w+\./';
     $changes = '';
-    $result = preg_replace($pattern, $changes, $string);
-    return $result;
+    return preg_replace($pattern, $changes, $string);
 }
-print_r(deleteLastWord($sentence));
+print_r(replaceLastWord($sentence));
