@@ -8,9 +8,22 @@
 "+3706234567a" - false
 */
 
+$numbers = [
+    "+37062345678",
+    "+37012345678",
+    "+3706234567" ,
+    "+3706234567a"
+];
+
 function isValidMobile(string $mobile): bool
 {
     $pattern = '/^(\+3706)(\d{7})$/';
-    return preg_match($pattern, $mobile);
+    if (preg_match($pattern, $mobile)){
+        return true;
+    } else {
+        return false;
+    }
 }
-var_dump(isValidMobile('+3706234567a'));
+foreach ($numbers as $number) {
+    var_dump(isValidMobile($number));
+}
