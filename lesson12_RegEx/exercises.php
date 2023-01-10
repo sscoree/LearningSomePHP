@@ -29,8 +29,8 @@ Jeigu telefono numeris validus, iš funkcijos turėtų grįžti tvarkingai sufor
 4. Parašykite funkciją, kuri užmaskuotų dalį vartotojo duomenų. Pavardės ir gimimo metų simboliai
 turėtų būti pakeisti i simbolius 'X'.
 "John Smith, 1979 05 15" --> "John XXXXX, XXXX 05 15"
-
-
+*/
+/*
 5. Parašykite funkciją, kuri pravaliduotų IPv4 adresą. IPv4 adresas yra sudarytas iš 4 skaičių, kurių kiekvienas gali
 būti nuo 0 iki 255. Skaičiai atskirti taškais.
 Pvz.:
