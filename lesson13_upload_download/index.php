@@ -11,5 +11,6 @@
     <input type="file" name="task_upload">
     <button type="submit">Upload</button>
 </form>
+<a href="gallery.php">To gallery</a>
 </body>
 </html>

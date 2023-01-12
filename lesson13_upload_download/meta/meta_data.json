@@ -1,8 +1,14 @@
-[
-    {
-        "name": "photo-1622737133809-d95047b9e673.jpeg",
+{
+    "1": {
+        "name": "photo123.jpeg",
         "size": 18113,
-        "path": ".\/data\/63bf0f151fb9b_photo-1622737133809-d95047b9e673.jpeg",
-        "date": "2023-01-11 20:33"
+        "path": ".\/data\/63c042deb87ef_photo123.jpeg",
+        "date": "2023-01-12 18:26"
+    },
+    "2": {
+        "name": "3547002.jpg",
+        "size": 184809,
+        "path": ".\/data\/63c04e0ce7e40_3547002.jpg",
+        "date": "2023-01-12 19:14"
     }
-]
+}
