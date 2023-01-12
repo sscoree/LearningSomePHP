@@ -5,6 +5,19 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Gallery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+        body {
+            text-align: center;
+            margin-top: 10px;
+        }
+        img {
+            margin-top: 10px;
+        }
+        input {
+            margin-left: 10px;
+        }
+    </style>
 </head>
 <body>
 
@@ -18,9 +31,9 @@
             echo '<div>'.'Filename: '.$value['name'].'<br>'.
                 'Size: '.$value['size'].' bytes'.'<br>'.
                 'Uploaded: '.$value['date'].'<br>'.
-                '<a href="download.php?id='.$key.'">Download</a>'.
+                '<a class="btn btn-primary href="download.php?id='.$key.'">Download</a>'.
                 '<form style="display: inline" method="POST" action="delete.php">
-                        <input type="submit" name="delete" value="Delete" />
+                        <input class="btn btn-danger" type="submit" name="delete" value="Delete" />
                         <input type="hidden" name="metaID" value="'.$key.'">
                  </form><br>'.
                 '<img src="'.$value['path'].'" width="250px" alt="some photo">'.
