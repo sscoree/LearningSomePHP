@@ -31,7 +31,7 @@
             echo '<div>'.'Filename: '.$value['name'].'<br>'.
                 'Size: '.$value['size'].' bytes'.'<br>'.
                 'Uploaded: '.$value['date'].'<br>'.
-                '<a class="btn btn-primary href="download.php?id='.$key.'">Download</a>'.
+                '<a class="btn btn-primary" href="download.php?id='.$key.'">Download</a>'.
                 '<form style="display: inline" method="POST" action="delete.php">
                         <input class="btn btn-danger" type="submit" name="delete" value="Delete" />
                         <input type="hidden" name="metaID" value="'.$key.'">
