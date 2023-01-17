@@ -21,7 +21,7 @@
 </head>
 <body>
 
-<div><a href="index.php">Go to main page</a></div>
+<div><a class="btn btn-warning" href="index.php">Go to main page</a></div>
 <br>
 <?php
     $metaFile = file_get_contents('./meta/meta_data.json', true);
