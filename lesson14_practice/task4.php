@@ -28,7 +28,7 @@ function word_statistics(array $input): array
     $output = [];
     foreach ($input as $word){
         $output[$word] = [
-            'vowels' => preg_match_all('/[aeiou]/i', $word),
+            'vowels' => preg_match_all('/[aeiyou]/i', $word),
             'consonants' => preg_match_all('/[bcdfghjklmnpqrstvxz]/i', $word),
             'length' => strlen($word),
             'starts_with' => substr($word, 0, 1),
