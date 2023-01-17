@@ -6,7 +6,7 @@ funkcija paverčia šį skaičių pliusiniu.
 Funkcijos kvietimas: exercise10(60)
  */
 
-function task3($number)
+function task3(int $number): void
 {
     $number = abs($number);
     for ($i = $number - 1; $i >= 55; $i--){
@@ -15,4 +15,4 @@ function task3($number)
         }
     }
 }
-print_r(task3(551));
+task3(551);
