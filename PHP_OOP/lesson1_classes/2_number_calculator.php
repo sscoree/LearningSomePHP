@@ -31,6 +31,6 @@ class NumberCalculator {
     }
     public function calculateAverage(): int {
         $average = array_sum($this->numbers) / count($this->numbers);
-        return round($average);
+        return ceil($average);
     }
 }
