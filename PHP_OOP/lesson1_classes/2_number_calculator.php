@@ -16,3 +16,21 @@ $numberCalculator->addNumber(7);
 echo $numberCalculator->calculateSum(); // 12
 */
 
+class NumberCalculator {
+    private array $numbers = [];
+    public function addNumber(int $number): void
+    {
+        $this->numbers[] = $number;
+    }
+    public function calculateSum(): int
+    {
+        return array_sum($this->numbers);
+    }
+    public function calculateProduct(): int {
+        return array_product($this->numbers);
+    }
+    public function calculateAverage(): int {
+        $average = array_sum($this->numbers) / count($this->numbers);
+        return round($average);
+    }
+}
