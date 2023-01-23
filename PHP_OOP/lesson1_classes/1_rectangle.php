@@ -26,7 +26,8 @@ class Rectangle {
         return 2 * ($this->length + $this->width);
     }
     public function calculateDiagonal(): float {
-        return sqrt(pow($this->length, 2) + pow($this->width, 2));
+        $result = sqrt(pow($this->length, 2) + pow($this->width, 2));
+        return round($result, 2);
     }
 }
 
