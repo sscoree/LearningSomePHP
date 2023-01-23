@@ -32,7 +32,7 @@
                         $item['deadline'].
                         '<form style="display: inline" method="POST" action="delete.php">
                         <input type="submit" name="delete" value="Delete" />
-                        <input type="hidden" name="todoID" value="'.$key.'">
+                        <input type="hidden" name="todoID" value="' .$key.'">
                         </form><br>';
                 }
             }

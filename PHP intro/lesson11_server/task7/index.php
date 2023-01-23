@@ -32,11 +32,11 @@
                         $item['deadline'].
                         '<form style="display: inline" method="POST" action="edit.php">
                         <input type="submit" name="edit" value="Edit" />
-                        <input type="hidden" name="editID" value="'.$key.'">
+                        <input type="hidden" name="editID" value="' .$key.'">
                         </form>'.
                         '<form style="display: inline" method="POST" action="delete.php">
                         <input type="submit" name="delete" value="Delete" />
-                        <input type="hidden" name="todoID" value="'.$key.'">
+                        <input type="hidden" name="todoID" value="' .$key.'">
                         </form><br>';
                 }
             }

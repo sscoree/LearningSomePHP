@@ -40,12 +40,12 @@ echo PHP_EOL;
 */
 function exercise3(): void
 {
-    echo date('Y M j H:i:s', 0).PHP_EOL;
-    echo date('Y M d H:i', 0).PHP_EOL;
-    echo date('Y M jS h:i:s A', 3600*15).PHP_EOL;
-    echo date('Y/n/j', 0).PHP_EOL;
-    echo date('W', 0).PHP_EOL;
-    echo date('z', 0).PHP_EOL;
+    echo regularExercises . phpdate('Y M j H:i:s', 0) . PHP_EOL;
+    echo regularExercises . phpdate('Y M d H:i', 0) . PHP_EOL;
+    echo regularExercises . phpdate('Y M jS h:i:s A', 3600 * 15) . PHP_EOL;
+    echo regularExercises . phpdate('Y/n/j', 0) . PHP_EOL;
+    echo regularExercises . phpdate('W', 0) . PHP_EOL;
+    echo regularExercises . phpdate('z', 0) . PHP_EOL;
 }
 exercise3();
 
