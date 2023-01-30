@@ -1,0 +1,6 @@
+2023-01-26 19:12:48 product "1" is not in the inventory
+2023-01-26 19:15:30 product "15" is not in the inventory
+2023-01-26 19:15:48 product "5" is not in the inventory
+2023-01-26 19:16:29 product "5" is not in the inventory
+2023-01-26 19:28:24 product "5" is not in the inventory
+2023-01-26 19:32:19 product "1" only has 15 items in the inventory
