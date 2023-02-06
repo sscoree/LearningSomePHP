@@ -16,3 +16,4 @@ class SavingsAccount extends BankAccount
 $savingsAccount = new SavingsAccount(1000);
 $savingsAccount->addInterest(0.05);
 echo "Balance after interest added is " . $savingsAccount->getBalance();
+
